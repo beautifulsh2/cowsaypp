@@ -64,91 +64,162 @@ def print_speech_bubble(text, bubble_shape='rounded', glasses=None, width=40):
     if glasses:
         bubble = [line.replace("( ", f"( {glasses} ") for line in bubble]
 
-    return "\n".join(bubble)
+def print_animal(name, text, rainbow=False, bubble_shape='rounded', animate=False, glasses=None, width=40, height=10, angry=False, clothes=None):  
+    if text.strip().lower() == "i hate cow" and name == "cow":  
+        console.print(" __________\n< hell you \U0001F95A >\n ----------\n>__<\n    (\u00ac\u00ac)\\_______\n    (__)\\       )\\/\\\n        ||----m |\n        ||     ||")  
+        return  
+  
+    if text.strip().lower() == "never gonna give you up" and name == "cow":  
+        console.print("\\   ^__^\n         \\  (\u2310\u25a0_\u25a0)\\_______\n            (__)\\       )\\/\\\n                ||----w |\n                ||     ||")  
+        return  
 
-def print_animal(name, text, rainbow=False, bubble_shape='rounded', animate=False, glasses=None, width=40, height=10, angry=False, clothes=None):
-    if text.lower() == "i hate cow" and name == "cow":
-        console.print(" __________\n< hell you \U0001F95A >\n ----------\n>__<\n    (\u00ac\u00ac)\\_______\n    (__)\\       )\\/\\\n        ||----m |\n        ||     ||")
+    if text.strip().lower() == "i worship cowsay++ with $10":  
+        console.print(rainbow_text("Thank you for your $10 donation. God of cowsay religion appreciates your support! 🙏"))  
         return
 
-    if text.lower().strip() == "never gonna give you up" and name == "cow":
-        console.print("\\   ^__^\n         \\  (\u2310\u25a0_\u25a0)\\_______\n            (__)\\       )\\/\\\n                ||----w |\n                ||     ||")
-        return
-
-    if clothes == "jacket" and name == "cow":
-        art = "\\   ^__^\n         \\  (oo)\\_______\n            (__)\\       )\\/\\\n             ||---------||\n             ||  ___    ||  \n             || |___|   ||  \n            /|| |___|   ||\\ \n           /_||         ||_\\\n          (__)|_________|(__)\n             ||         ||\n             ^^         ^^"
-    elif clothes == "tshirt" and name == "cow":
-        art = "\\   ^__^\n         \\  (oo)\\_______\n            (__)\\       )\\/\\\n             ||  _____  ||\n             || /     \\ ||\n             |||       |||\n             ||\\_____/ || \n             ||         ||\n             ^^         ^^"
-    elif clothes == "lavender" and name == "cow":
-        art = "\\   ^__^\n         \\  (oo)\\_______\n            (__)\\       )\\/\\\n             ||  _____  ||\n             || /     \\ ||  \n             ||| \u2588\u2588\u2592 \u2592\u2588 |||  \n             ||\\__\u25b2\u25b2__/ ||   \n             ||         ||\n             ^^         ^^"
-    else:
-        animals = {
-            "cow": r'''\\   ^__^
-         \\  (oo)\\_______
-            (__)\\       )\/\
-                ||----w |
-                ||     ||''',
-            "cow-angry": r'''\\   ^!!^
-         \\  (><)\\_______
-            (__)\\       )\/\
-                ||----# |
-                ||     ||''',
-            "dog": r'''\\   / \\__
-        (    @\\___
-        /         O
-      /   (_____ /
-     /_____/   U''',
-            "dog-angry": r'''\\   / \\__
-        (    >@___
-        /         #
-      /   (_____ /
-     /_____/   U''',
-            "cat": [r'''        /\\_/\\
-       ( o.o )
-        > ^ <''', r'''        /\\_/\\
-       ( -.- )
-        > ^ <'''],
-            "cat-angry": [r'''        /\\_/\\
-       ( >.< )
-        > ^ <''', r'''        /\\_/\\
-       ( x.x )
-        > ^ <'''],
-            "fox": [r'''       /\\   /\\
-      ( o . o )
-       (  V  )
-       /     \\''', r'''      /\\   /\\
-      ( - . - )
-       (  V  )
-       /     \\'''],
-            "fox-angry": [r'''       /\\   /\\
-      ( > . < )
-       (  V  )
-       /     \\''', r'''      /\\   /\\
-      ( x . x )
-       (  V  )
-       /     \\'''],
-            "car": r"""
-      ______
-      /|_||_\\`.__
-     (   _    _ _\\
-     =`-(_)--(_)-'
-""",
-            "train": r"""
-o O __    _________
-   _ ][__| o |  |  O O O O|   
-<_______|__|__|___________|   
- / 0-0-0      o-o-o-o-o-o  \  
-~~~   ~~~~~~~~~ ~~~~~ ~~~~~~
+    if text.strip().lower() == "among us":  
+        among_us_art = r"""
+⠀⠀⠀⠀⠀⠀⠀⣠⣤⣤⣤⣀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⣴⣿⡟⠛⠛⠛⠻⢿⣷⣦⡀⠀⠀⠀⠀
+⠀⠀⠀⠀⣼⣿⡏⠀⠀⠀⠀⠀⠀⠙⣿⣿⣄⠀⠀⠀
+⠀⠀⠀⣸⣿⣿⠀⠀⠀⠀⠀⠀⠀⠀⠘⣿⣿⣷⡀⠀
+⠀⠀⠀⣿⣿⣿⠀⠀⢀⣀⣀⣀⣀⠀⠀⣿⣿⣿⣿⠀
+⠀⠀⠀⣿⣿⣿⠀⢰⣿⣿⣿⣿⣿⣷⠀⣿⣿⣿⣿⠀
+⠀⠀⠀⣿⣿⣿⠀⣿⣿⡿⠿⠿⠿⠋⠀⠈⠻⣿⣿⠀
+⠀⠀⠀⢿⣿⣿⣷⣶⣶⣶⣶⣶⣶⣶⣶⣶⣾⣿⠃⠀
+⠀⠀⠀⠀⠙⠻⠿⠿⠿⠿⠿⠿⠿⠿⠿⠛⠋⠀⠀⠀
 """
-        }
-        key = name + "-angry" if angry else name
-        art = animals.get(key, animals.get("cow"))
+        console.print(rainbow_ascii(among_us_art) if rainbow else among_us_art)
+        return
 
-    speech_bubble = print_speech_bubble(text, bubble_shape, glasses, width)
-    if rainbow:
-        console.print(rainbow_text(speech_bubble))
-    else:
-        console.print(speech_bubble)
+    if text.strip().lower() == "cow is love cow is life":  
+        console.print(rainbow_text("Moo is eternal. Moo is divine."))  
+        return  
+
+    if text.strip().lower() == "barklord arise":  
+        console.print(rainbow_text("Woof Woof! Barklord has awakened."))  
+        return
+
+    if text.strip().lower() == "i failed in my exam":
+        console.print(rainbow_text("Bad Luck"))
+        art = r'''\\   ^!!^  
+         \\  (><)\\_______  
+            (__)\\       )\/\  
+                ||----# |  
+                ||     ||'''
+        console.print(rainbow_ascii(art) if rainbow else art)
+        return
+
+    if text.strip().lower() == "git init":
+        console.print(rainbow_text("Haha! I didn't init it????"))
+        art = r'''\\   ^__^  
+         \\  (oo)\\_______  
+            (__)\\       )\/\  
+                ||----w |  
+                ||     ||'''
+        console.print(rainbow_ascii(art) if rainbow else art)
+        return
+
+    if text.strip().lower().startswith("git commit -m"):
+        console.print(rainbow_text("fuck your commit Haha!!!!"))
+        art = r'''\\   ^__^  
+         \\  (oo)\\_______  
+            (__)\\       )\/\  
+                ||----w |  
+                ||     ||'''
+        console.print(rainbow_ascii(art) if rainbow else art)
+        return
+
+    if clothes == "jacket" and name == "cow":  
+        art = "\\   ^__^\n         \\  (oo)\\_______\n            (__)\\       )\\/\\\n             ||---------||\n             ||  ___    ||  \n             || |___|   ||  \n            /|| |___|   ||\\ \n           /_||         ||_\\\n          (__)|_________|(__)\n             ||         ||\n             ^^         ^^"  
+    elif clothes == "tshirt" and name == "cow":  
+        art = "\\   ^__^\n         \\  (oo)\\_______\n            (__)\\       )\\/\\\n             ||  _____  ||\n             || /     \\ ||\n             |||       |||\n             ||\\_____/ || \n             ||         ||\n             ^^         ^^"  
+    elif clothes == "lavender" and name == "cow":  
+        art = "\\   ^__^\n         \\  (oo)\\_______\n            (__)\\       )\\/\\\n             ||  _____  ||\n             || /     \\ ||  \n             ||| \u2588\u2588\u2592 \u2592\u2588 |||  \n             ||\\__\u25b2\u25b2__/ ||   \n             ||         ||\n             ^^         ^^"  
+    else:  
+        animals = {  
+            "cow": r'''\\   ^__^  
+         \\  (oo)\\_______  
+            (__)\\       )\/\  
+                ||----w |  
+                ||     ||''',  
+            "cow-angry": r'''\\   ^!!^  
+         \\  (><)\\_______  
+            (__)\\       )\/\  
+                ||----# |  
+                ||     ||''',  
+            "dog": r'''\\   / \\__  
+        (    @\\___  
+        /         O  
+      /   (_____ /  
+     /_____/   U''',  
+            "dog-angry": r'''\\   / \\__  
+        (    >@___  
+        /         #  
+      /   (_____ /  
+     /_____/   U''',  
+            "cat": [r'''        /\\_/\\  
+       ( o.o )  
+        > ^ <''', r'''        /\\_/\\  
+       ( -.- )  
+        > ^ <'''],  
+            "cat-angry": [r'''        /\\_/\\  
+       ( >.< )  
+        > ^ <''', r'''        /\\_/\\  
+       ( x.x )  
+        > ^ <'''],  
+            "fox": [r'''       /\\   /\\  
+      ( o . o )  
+       (  V  )  
+       /     \\''', r'''      /\\   /\\  
+      ( - . - )  
+       (  V  )  
+       /     \\'''],  
+            "fox-angry": [r'''       /\\   /\\  
+      ( > . < )  
+       (  V  )  
+       /     \\''', r'''      /\\   /\\  
+      ( x . x )  
+       (  V  )  
+       /     \\'''],  
+            "car": r"""  
+      ______  
+      /|_||_\\`.__  
+     (   _    _ _\\  
+     =`-(_)--(_)-'  
+""",  
+            "train": r"""  
+o O __    _________  
+   _ ][__| o |  |  O O O O|     
+<_______|__|__|___________|     
+ / 0-0-0      o-o-o-o-o-o  \    
+~~~   ~~~~~~~~~ ~~~~~ ~~~~~~  
+"""  
+        }  
+        key = name + "-angry" if angry else name  
+        art = animals.get(key, animals.get("cow"))  
+  
+    if text.strip().lower() == "ls" and name == "cow":  
+        console.print(rainbow_text("drwxrwxrwx   3 cow cow 4096 Apr 18 2025 .\n-rw-r--r--   1 cow cow   420 Apr 18 2025 moo.txt\n-rwxr-xr-x   1 cow cow   55 Apr 18 2025 milk.sh"))  
+        return  
+
+    if text.strip().lower() == "ps" and name == "cow":  
+        console.print(rainbow_text("PID TTY      STAT   TIME COMMAND\n 1014 tty1     S+     0:02 cow.sh\n 2034 tty2     S      0:00 cow-milk"))  
+        return  
+
+    if text.strip().lower() == "cd" and name == "cow":  
+        console.print(rainbow_text("bash: cd: moo: No such file or directory"))  
+        return  
+
+    if text.strip().lower() == "cat" and name == "cow":  
+        console.print(rainbow_text("moo moo moo moo moo..."))  
+        return  
+
+    speech_bubble = print_speech_bubble(text, bubble_shape, glasses, width)  
+    if rainbow:  
+        console.print(rainbow_text(speech_bubble))  
+    else:  
+        console.print(speech_bubble)  
     console.print(rainbow_ascii(art) if rainbow else art)
 
 def play_sound(animal):
