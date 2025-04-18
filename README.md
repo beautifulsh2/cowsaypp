@@ -1,4 +1,4 @@
-# cowsay++: Enhanced Version of cowsay (10.6.1)
+# cowsay++: Enhanced Version of cowsay (11.7.4)
 
 ## Overview
 
@@ -22,6 +22,7 @@ cowsay++ is an significant and feature-rich enhanced version of the classic cows
 - Rich text formatting with color support
 - Weather information integration
 - Livestream mode with random messages
+- Developer mode with random git messages
 - Angry animal variants
 - Cheap fortune mode for random facts
 - Vehicle support (car, train)
@@ -168,6 +169,25 @@ The `-live` option activates livestream mode, which displays random messages abo
 
 The `-cheap_fortune` option displays random interesting facts instead of your message.
 
+## Easter Eggs 
+
+- if message is "I hate cow" it will show angry cow ASCII art and will show "hell you 🥚"
+- if message is "never gonna give you up" it will show the message with cow ascii art in 80s sunglasses
+- if message is "cow is love, cow is life" it will say "moo is eternal, moo is divine"
+- if message is "backlord arise" it will say "Woof Woof! Backlord was awaken"
+- if message is "i failed in my exam" it will say "Bad Luck" with angry cow ascii art
+- if message is "among us" it will show an among us crewmate ascii art
+- 
+**Developer Easter Eggs**
+- if message is "git init" it will say "Haha i didn't init it!!!????"
+- if message is "git commit -m <commit>" it will say "fuck your commit, haha"
+
+**System Easter Eggs**
+- if message is "ls" it will list random files like cow.sh and cow.txt
+- if message is "ps" it will show fake info 
+- if message is "cat" it says moo 5 times
+- if message is "cd" it shows a simulated error
+
 ## Technical Implementation
 
 The script uses:
@@ -193,12 +213,5 @@ This is an actively maintained project. New features and improvements are regula
 1. Sound effects must be placed in the same directory as the script
 2. The text-to-speech functionality uses the system's default voice
 3. For custom animals, ensure your ASCII art is properly formatted
-4. Animation works by alternating between two frames for supported animals
-5. The glasses option (-g) adds text to the animal's face
-6. PNG conversion uses default system font and may require adjustment for optimal results
-7. Weather functionality requires an internet connection
-8. Angry variants provide alternative ASCII art for each animal
-9. Livestream mode displays random messages about streaming platforms
-10. Vehicle support was added in version 10.6.1
-11. Clothing options are currently only available for cows
-12. Cheap fortune mode provides random interesting factsh
+4. PNG conversion uses default system font and may require adjustment for optimal results
+5. Weather functionality requires an internet connection
